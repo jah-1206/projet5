@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container-fluid" data-aos="fade" data-aos-delay="500">
+    <div class="swiper-container images-carousel">
+        <div class="swiper-wrapper d-flex justify-content-around">
+            <div class="swiper-slide">
+                <div class="image-wrap rounded">
+                    <div class="image-info">
+                        <h2 class="mb-3">Automobile</h2>
+                        <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                    </div>
+                    <img src="images/home_1.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-wrap rounded">
+                    <div class="image-info">
+                        <h2 class="mb-3">Nature</h2>
+                        <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                    </div>
+                    <img src="images/home_2.jpg" alt="Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div> -->
+    </div>
+</div>
+{% endblock %}
