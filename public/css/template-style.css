@@ -74,7 +74,7 @@ a {
   height: 43px;
   border-radius: 0; }
   .form-control:active, .form-control:focus {
-    border-color: #20c997; }
+    border-color: #3278d6; }
   .form-control:hover, .form-control:active, .form-control:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
@@ -417,12 +417,12 @@ a {
       position: relative;
       color: #212529; }
       .site-mobile-menu .site-nav-wrap a:hover {
-        color: #20c997; }
+        color: #3278d6; }
     .site-mobile-menu .site-nav-wrap li {
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li.active > a {
-        color: #20c997; }
+        color: #3278d6; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -811,7 +811,7 @@ a {
     font-weight: bold;
     color: #cccccc; }
     .site-block-tab .nav-item > a:hover, .site-block-tab .nav-item > a.active {
-      border-bottom: 2px solid #20c997;
+      border-bottom: 2px solid #3278d6;
       color: #000; }
 
 .block-13, .slide-one-item {
@@ -935,7 +935,7 @@ a {
         width: 80px;
         height: 4px;
         margin-top: -4px;
-        background: #20c997;
+        background: #3278d6;
         top: 0; }
       .block-12 .text .text-inner .heading {
         font-size: 20px;
@@ -958,7 +958,7 @@ a {
     display: block;
     border-radius: 50%;
     opacity: 1;
-    color: #20c997 !important; }
+    color: #3278d6 !important; }
     .block-16 figure .play-button:hover {
       opacity: 1; }
     .block-16 figure .play-button > span {
@@ -996,7 +996,7 @@ a {
   color: #999999; }
 
 .block-25 ul li a .meta {
-  color: #20c997; }
+  color: #3278d6; }
 
 .block-25 ul li a:hover img {
   opacity: .5; }
@@ -1025,7 +1025,7 @@ a {
     position: absolute;
     width: 30px;
     height: 30px;
-    background: #20c997;
+    background: #3278d6;
     border-radius: 50%;
     color: #fff; }
     .player .team-number > span {
@@ -1060,7 +1060,7 @@ a {
     border-radius: 50%;
     border: 1px solid #ccc; }
   .site-block-27 ul li.active a, .site-block-27 ul li.active span {
-    background: #20c997;
+    background: #3278d6;
     color: #fff;
     border: 1px solid transparent; }
 
@@ -1162,7 +1162,7 @@ a {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #20c997; }
+  background: #3278d6; }
 
 #lightgallery .item {
   margin-bottom: 30px; }

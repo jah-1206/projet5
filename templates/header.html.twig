@@ -6,7 +6,6 @@
     </div>
     <div class="site-mobile-menu-body"></div>
 </div>
-
 <header class="site-navbar py-3" role="banner">
     <div class="container-fluid">
         <div class="row align-items-center">
@@ -16,23 +15,23 @@
             <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
                 <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                        <li class="active"><a href="{{ path('home') }}">Home</a></li>
+                        <li {% if app.request.attributes.get('_route') == 'home' %}class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
                         <li class="has-children">
                             <a href="#">Galerie</a>
                             <ul class="dropdown">
-                                <li class="has-children">
-                                    <a href="#">Automobile</a>
+                                <li  {% if app.request.attributes.get('_route') == ('automobile') %}class="active has-children"{% endif %} class="has-children">
+                                    <a href="{{ path('automobile') }}">Automobile</a>
                                     <ul class="dropdown">
                                         <li><a href="#">Asie</a></li>
                                         <li><a href="#">Europe</a></li>
                                         <li><a href="#">Amérique</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Nature</a></li>
+                                <li {% if app.request.attributes.get('_route') == ('nature') %}class="active"{% endif %}><a href="{{ path('nature') }}">Nature</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ path('about') }}">À propos</a></li>
-                        <li><a href="{{ path('contact') }}">Contact</a></li>
+                        <li {% if app.request.attributes.get('_route') == ('about') %}class="active"{% endif %}><a href="{{ path('about') }}">À propos</a></li>
+                        <li {% if app.request.attributes.get('_route') == ('contact') %}class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
                     </ul>
                 </nav>
             </div>
