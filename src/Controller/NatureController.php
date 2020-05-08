@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class NatureController extends AbstractController
 {
     /**
-     * @Route("/Nature", name="nature")
+     * @Route("/nature", name="nature")
      */
     public function index()
     {

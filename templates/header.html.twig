@@ -22,9 +22,9 @@
                                 <li  {% if app.request.attributes.get('_route') == ('automobile') %}class="active has-children"{% endif %} class="has-children">
                                     <a href="{{ path('automobile') }}">Automobile</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Asie</a></li>
-                                        <li><a href="#">Europe</a></li>
-                                        <li><a href="#">Amérique</a></li>
+                                        <li><a href="#">Évenements</a></li>
+                                        <li><a href="#">Shootings</a></li>
+                                        <li><a href="#">Divers</a></li>
                                     </ul>
                                 </li>
                                 <li {% if app.request.attributes.get('_route') == ('nature') %}class="active"{% endif %}><a href="{{ path('nature') }}">Nature</a></li>
@@ -32,6 +32,9 @@
                         </li>
                         <li {% if app.request.attributes.get('_route') == ('about') %}class="active"{% endif %}><a href="{{ path('about') }}">À propos</a></li>
                         <li {% if app.request.attributes.get('_route') == ('contact') %}class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
+                        {% if app.user %}
+                        <li class="danger"><a href="{{ path('app_logout') }}">Se déconnecter</a></li>    
+                        {% endif %}
                     </ul>
                 </nav>
             </div>
