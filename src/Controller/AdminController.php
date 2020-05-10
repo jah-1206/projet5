@@ -5,13 +5,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class NatureController extends AbstractController
+class AdminController extends AbstractController
 {
     /**
-     * @Route("/nature", name="nature")
+     * @Route("/admin", name="admin")
      */
     public function index()
     {
-        return $this->render('gallery/nature.html.twig');
+        return $this->render('admin/index.html.twig');
     }
 }

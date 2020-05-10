@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une nouvelle image{% endblock %}
+
+{% block body %}
+    
+
+{{ form_start(form) }}
+<div class="row">
+    <div class="col md-4">{{ form_row(form.imageName) }}</div>
+    <div class="col md-4">{{ form_row(form.imageFile) }}</div>
+</div>
+{{ form_rest(form) }}
+<button class="btn btn-primary">{{ button|default('Ajouter') }}</button>
+{{ form_end(form) }}
+{% endblock %}

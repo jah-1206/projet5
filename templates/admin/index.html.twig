@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panneau d'administration{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Hello {{ app.user.username }}</h1>
+
+Add a new picture :
+<a href="{{ path('new') }}" class="btn btn-primary">Add</a>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<div class="row">
+    {% for image in images %}
+        <div class="col-md-4">
+            <p>{{ image.imageName }} </p>
+            <img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageName }}">
+        </div>
+    {% endfor %}
+</div>
+<a href="{{ path('new') }}" class="btn btn-primary">Add</a>
