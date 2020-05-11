@@ -8,7 +8,7 @@
     <div class="col-md-7">
       <div class="row mb-5">
         <div class="col-12 ">
-          <h2 class="site-section-heading text-center">Nature</h2>
+          <h2 class="site-section-heading text-center">Automobile - Shootings</h2>
         </div>
       </div>
     </div>
@@ -17,8 +17,9 @@
   <div class="row" id="lightgallery">
     {% for image in images %}
     <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="{{ vich_uploader_asset(image, 'imageFile')}}"
-      data-sub-html="<h4>{{ image.imageTitle }}</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
-      <a href="#"><img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageName }}" class="img-fluid"></a>
+      data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+
+      <a href="#"><img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageTitle }}" class="img-fluid"></a>
     </div>
     {% endfor %}
   </div>

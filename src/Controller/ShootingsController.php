@@ -6,16 +6,16 @@ use App\Repository\ImageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AutomobileController extends AbstractController
+class ShootingsController extends AbstractController
 {
     /**
-     * @Route("/automobile", name="automobile")
+     * @Route("/automobile/shootings", name="shootings")
      */
     public function index(ImageRepository $repository)
     {
-        $images = $repository->findAutomobileImages();
-        return $this->render('gallery/automobile.html.twig', [
-            'images' => $images
+        $images = $repository->findShootingsImages();
+        return $this->render('gallery/shootings.html.twig', [
+            'images' => $images,
         ]);
     }
 }

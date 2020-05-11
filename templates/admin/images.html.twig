@@ -1,9 +1,18 @@
+{% extends "base.html.twig" %}
+{% block title %}Gestion d'images{% endblock title %}
+
+{% block body %}
+
+<a href="{{ path('new') }}" class="btn btn-primary">Add</a>
 <div class="row">
     {% for image in images %}
-        <div class="col-md-4">
-            <p>{{ image.imageName }} </p>
-            <img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageName }}">
-        </div>
+        <img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageTitle }}" class="img-fluid col-sm-6 col-md-4 col-lg-3 col-xl-2 item">
+        <form method="post" action="{{ path('image_delete', {'id': image.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ image.id) }}">
+            <button class="btn">Delete</button>
+        </form>
     {% endfor %}
 </div>
-<a href="{{ path('new') }}" class="btn btn-primary">Add</a>
+
+{% endblock body %}

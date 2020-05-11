@@ -4,13 +4,12 @@
 
 {% block body %}
     
-
+<div class="container col-md-6">
 {{ form_start(form) }}
-<div class="row">
-    <div class="col md-4">{{ form_row(form.imageName) }}</div>
     <div class="col md-4">{{ form_row(form.imageFile) }}</div>
-</div>
+    <div class="col md-4">{{ form_row(form.imageTitle) }}</div>
 {{ form_rest(form) }}
 <button class="btn btn-primary">{{ button|default('Ajouter') }}</button>
 {{ form_end(form) }}
+</div>
 {% endblock %}

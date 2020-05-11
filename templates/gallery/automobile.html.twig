@@ -1,44 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
- <div class="container-fluid">
-      
-      <div class="row justify-content-center">
-        
-        <div class="col-md-7">
-          <div class="row mb-5">
-            <div class="col-12 ">
-              <h2 class="site-section-heading text-center">Galerie Automobile</h2>
+<div class="container-fluid" data-aos="fade" data-aos-delay="500">
+    <div class="swiper-container images-carousel">
+        <div class="swiper-wrapper d-flex justify-content-around">
+            <div class="swiper-slide">
+                <div class="image-wrap rounded">
+                    <div class="image-info">
+                        <h2 class="mb-3">Events</h2>
+                        <a href="{{ path('events') }}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                    </div>
+                    <img src="images/events_cover.jpg" alt="Image">
+                </div>
             </div>
-          </div>
+            <div class="swiper-slide">
+                <div class="image-wrap rounded">
+                    <div class="image-info">
+                        <h2 class="mb-3">Shootings</h2>
+                        <a href="{{ path('shootings') }}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                    </div>
+                    <img src="images/shootings_cover.jpg" alt="Image">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-wrap rounded">
+                    <div class="image-info">
+                        <h2 class="mb-3">Divers</h2>
+                        <a href="{{ path('divers') }}" class="btn btn-outline-white py-2 px-4">More Photos</a>
+                    </div>
+                    <img src="images/divers_cover.jpg" alt="Image">
+                </div>
+            </div>
         </div>
-    
-      </div>
-      <div class="row" id="lightgallery">
-        {% for image in images %}
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="{{ vich_uploader_asset(image, 'imageFile')}}" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
-            
-            
-            <a href="#"><img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageName }}" class="img-fluid"></a>
-          </div>
-        {% endfor %}
-          
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="images/big-images/nature_big_2.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis quaerat molestiae, praesentium. Ipsam, reiciendis. Aut molestiae animi earum laudantium.</p>">
-          <a href="#"><img src="images/nature_small_2.jpg" alt="IMage" class="img-fluid"></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="images/big-images/nature_big_3.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem reiciendis, dolorum illo temporibus culpa eaque dolore rerum quod voluptate doloribus.</p>">
-          <a href="#"><img src="images/nature_small_3.jpg" alt="IMage" class="img-fluid"></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="images/big-images/nature_big_4.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.</p>">
-          <a href="#"><img src="images/nature_small_4.jpg" alt="IMage" class="img-fluid"></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="images/big-images/nature_big_5.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, voluptatum voluptate tempore aliquam, dolorem distinctio. In quas maiores tenetur sequi.</p>">
-          <a href="#"><img src="images/nature_small_5.jpg" alt="IMage" class="img-fluid"></a>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item" data-aos="fade" data-src="images/big-images/nature_big_6.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cum culpa blanditiis illum, voluptatum iusto quisquam mollitia debitis quaerat maiores?</p>">
-          <a href="#"><img src="images/nature_small_6.jpg" alt="IMage" class="img-fluid"></a>
-        </div>
-      </div>
+
+        <!-- <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div> -->
     </div>
-  </div>
+</div>
 {% endblock %}

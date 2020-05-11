@@ -13,6 +13,14 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Image
 {
+
+    const CATEGORY = [
+        0 => 'Events',
+        1 => 'Shootings',
+        2 => 'Autos - Divers',
+        3 => 'Nature'
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -22,6 +30,7 @@ class Image
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string|null
      */
     private $imageName;
     
@@ -44,6 +53,16 @@ class Image
      */
     private $hashtags = [];
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $category;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $imageTitle;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,7 +73,7 @@ class Image
         return $this->imageName;
     }
 
-    public function setImageName(string $imageName): self
+    public function setImageName(?string $imageName = null): self
     {
         $this->imageName = $imageName;
 
@@ -97,6 +116,30 @@ class Image
     public function setHashtags(array $hashtags): self
     {
         $this->hashtags = $hashtags;
+
+        return $this;
+    }
+
+    public function getCategory(): ?int
+    {
+        return $this->category;
+    }
+
+    public function setCategory(int $category): self
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    public function getImageTitle(): ?string
+    {
+        return $this->imageTitle;
+    }
+
+    public function setImageTitle(string $imageTitle): self
+    {
+        $this->imageTitle = $imageTitle;
 
         return $this;
     }

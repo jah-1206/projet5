@@ -7,6 +7,7 @@ use App\Form\ImageType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use App\Repository\ImageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -62,5 +63,19 @@ class AdminImageController extends AbstractController {
             'image' => $image,
             'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/{id}", name="image_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Image $image): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$image->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($image);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('images');
     }
 }

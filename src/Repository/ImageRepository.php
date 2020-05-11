@@ -19,9 +19,60 @@ class ImageRepository extends ServiceEntityRepository
         parent::__construct($registry, Image::class);
     }
 
-    public function findAllImages() 
+    public function findAllImages()
     {
         return $this->createQueryBuilder('i')
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+    public function findAutomobileImages()
+    {
+        return $this->createQueryBuilder('i')
+        ->andWhere('i.category <= :cat')
+        ->setParameter('cat', 2)
+        ->orderBy('i.id', 'DESC')
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
+    public function findEventsImages()
+    {
+        return $this->createQueryBuilder('i')
+        ->andWhere('i.category = :cat')
+        ->setParameter('cat', 0)
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
+    public function findShootingsImages()
+    {
+        return $this->createQueryBuilder('i')
+        ->andWhere('i.category = :cat')
+        ->setParameter('cat', 1)
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
+    public function findDiversImages()
+    {
+        return $this->createQueryBuilder('i')
+        ->andWhere('i.category = :cat')
+        ->setParameter('cat', 2)
+        ->getQuery()
+        ->getResult()
+        ;
+    }
+
+    public function findNatureImages()
+    {
+        return $this->createQueryBuilder('i')
+        ->where('i.category = :cat')
+        ->setParameter('cat', 3)
+        ->orderBy('i.id', 'DESC')
         ->getQuery()
         ->getResult()
         ;
