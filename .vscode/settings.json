@@ -8,6 +8,24 @@
             "port": 3306,
             "server": "localhost",
             "username": "jah"
+        },
+        {
+            "database": "projet5",
+            "dialect": "MySQL",
+            "name": "default",
+            "password": "M@ckl0tt11",
+            "port": 3306,
+            "server": "localhost",
+            "username": "charles"
+        },
+        {
+            "database": "projet5",
+            "dialect": "PostgreSQL",
+            "name": "projet5",
+            "password": "root",
+            "port": 5432,
+            "server": "localhost",
+            "username": "charles"
         }
     ]
 }

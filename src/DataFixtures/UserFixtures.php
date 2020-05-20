@@ -19,12 +19,12 @@ class UserFixtures extends Fixture
     {
         $this->encoder = $encoder;
     }
-
+    
     public function load(ObjectManager $manager)
     {
         $user = new User();
         $user->setUsername('Charles')
-            ->setRoles('ROLE_ADMIN')
+            ->setRoles(['ROLE_ADMIN'])
             ->setPassword($this->encoder->encodePassword($user, 'M@ckl0tt11'));
 
         $manager->persist($user);
